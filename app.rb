@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'watir'
-require 'headless'
+# require 'headless'
 require "sinatra/json"
 
 get '/' do
