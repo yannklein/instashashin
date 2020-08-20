@@ -36,6 +36,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  selenium-webdriver
   sinatra
   sinatra-contrib
   watir
