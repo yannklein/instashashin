@@ -1,13 +1,10 @@
 require 'sinatra'
 require 'watir'
-# require 'headless'
 require "sinatra/json"
 
 get '/' do
   results = []
-  # headless = Headless.new
-  # headless.start
-  browser = Watir::Browser.new
+  browser = Watir::Browser.new :chrome, args: %w[--headless --no-sandbox --disable-dev-shm-usage --disable-gpu]
 
   browser.goto 'https://www.instagram.com/lucy_eyelash_beauty/'
   imgs = browser.images(:class => "FFVAD")
